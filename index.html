@@ -80,7 +80,7 @@
     <div class="hero-inner hero__container">
       <h1 class="hero__title"><span>IT-Mod</span>- системний інтегратор програмно-апаратних рішень в Україні</h1>
       <h2 class="hero__subtitle">Комплексні рішення. Обладнання. Програмне забезпечення.</h2>
-      <a href="#" class="button">Звʼязатися</a>
+      <a href="#" class="openWrightToUsButton button">Звʼязатися</a>
       <div class="social-icons">
         <a href="#" class="icon">
           <svg class="telegram" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 36 36" fill="none">
@@ -232,19 +232,19 @@
       <h2 class="customers__title title title-center">Наші клієнти</h2>
       <div class="customers__list">
         <div class="customers__item">
-          <img class="customers__img" src="./img/customers/logo-ngs.png" alt="NGS"></img>
+          <img class="customers__img" src="./img/customers/logo-ngs.png" alt="NGS">
         </div>
         <div class="customers__item">
-          <img class="customers__img" src="./img/customers/logo-usg.png" alt="USG"></img>
+          <img class="customers__img" src="./img/customers/logo-usg.png" alt="USG">
         </div>
         <div class="customers__item">
-          <img class="customers__img" src="./img/customers/logo-partner.png" alt="Partner"></img>
+          <img class="customers__img" src="./img/customers/logo-partner.png" alt="Partner">
         </div>
         <div class="customers__item">
-          <img class="customers__img" src="./img/customers/logo-tyzhden.png" alt="Tyzhden"></img>
+          <img class="customers__img" src="./img/customers/logo-tyzhden.png" alt="Tyzhden">
         </div>
         <div class="customers__item">
-          <img class="customers__img" src="./img/customers/logo-aska.png" alt="Aska"></img>
+          <img class="customers__img" src="./img/customers/logo-aska.png" alt="Aska">
         </div>
       </div>
     </div>
@@ -313,7 +313,7 @@
         <input type="text" id="name" name="name" placeholder="Ваше імʼя*" required>
         <input type="email" id="email" name="email" placeholder="Email*" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
         <input type="tel" id="phone" name="phone" placeholder="Телефон*" required pattern="[0-9]{10}">
-        <button class="openModalButton button" type="submit">Надіслати</button>
+        <button class="openFeedbackButton button" type="submit">Надіслати</button>
       </form>
     </div>
   </section>
@@ -342,9 +342,9 @@
   <!-- Модальне вікно -->
   <div
 	id="feedbackModal"
-	class="modal">
-	<div class="modal-content">
-		<span class="close closeModalButton">&times;</span>
+	class="modal modal-feedback">
+	<div class="modal__content">
+		<span class="close closeFeedbackButton">&times;</span>
 		<div class="modal__inner">
 			<img
 				src="./img/modal/icon_yes.png"
@@ -357,52 +357,136 @@
 	</div>
 </div>
 
+<div
+	id="wrightToUsModal"
+	class="modal modal-wright">
+	<div class="modal__content">
+		<span class="close closeWrightToUsButton">&times;</span>
+		<div class="modal__inner">
+			<p class="modal__title modal__title-wright">Звʼяжіться з нами</p>
+			<form class="wright__form form">
+				<input
+					type="text"
+					id="wright-name"
+					class="form__item form__item-name"
+					name="name"
+					placeholder="Ваше імʼя*"
+					required />
+				<input
+					type="text"
+					id="wright-company"
+					class="form__item form__item-company"
+					name="name"
+					placeholder="Назва компанії*"
+					required />
+				<input
+					type="email"
+					id="wright-email"
+					class="form__item form__item-email"
+					name="email"
+					placeholder="Email*"
+					required
+					pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" />
+				<input
+					type="tel"
+					id="wright-phone"
+					class="form__item form__item-phone"
+					name="phone"
+					placeholder="Телефон*"
+					required
+					pattern="[0-9]{10}" />
+				<textarea
+					name=""
+					id="wright-message"
+					class="form__item form__item-message"
+					placeholder="Текст повідомлення"
+					cols="30"
+					rows="2"></textarea>
+				<button
+					class="openFeedbackButton2 button"
+					type="submit">
+					Надіслати
+				</button>
+			</form>
+		</div>
+	</div>
+</div>
+
 
 </main>
 
 			<footer class="footer">
 	<div class="footer__container">
-		<div class="footer__menu menu">
+		<div class="footer__inner">
 			<img
 				src="./img/logo.png"
 				alt="Logo" />
-			<nav class="menu__body">
-				<ul class="menu__list menu__list-footer">
-					<li class="menu__item">
-						<a
-							href="#about"
-							class="menu__link"
-							>Про нас</a
-						>
-					</li>
-					<li class="menu__item">
-						<a
-							href="#services"
-							class="menu__link"
-							>Послуги</a
-						>
-					</li>
-					<li class="menu__item">
-						<a
-							href="#partners"
-							class="menu__link"
-							>Партнери</a
-						>
-					</li>
-					<li class="menu__item">
-						<a
-							href="#contacts"
-							class="menu__link"
-							>Контакти</a
-						>
-					</li>
-				</ul>
-			</nav>
+			<div class="footer__menu menu">
+				<nav class="menu__body">
+					<ul class="menu__list menu__list-footer">
+						<li class="menu__item">
+							<a
+								href="#about"
+								class="menu__link"
+								>Про нас</a
+							>
+						</li>
+						<li class="menu__item">
+							<a
+								href="#services"
+								class="menu__link"
+								>Послуги</a
+							>
+						</li>
+						<li class="menu__item">
+							<a
+								href="#partners"
+								class="menu__link"
+								>Партнери</a
+							>
+						</li>
+						<li class="menu__item">
+							<a
+								href="#contacts"
+								class="menu__link"
+								>Контакти</a
+							>
+						</li>
+					</ul>
+				</nav>
+			</div>
 			<a
 				href="tel:+380443395720"
 				class="footer__phone"
 				>+38 044 339 57 20</a
 			>
+		</div>
+		<div class="footer__icons">
+			<a href="#"
+				><img
+					src="./img/contacts/icon_telegram.svg"
+					alt="Telegram"
+			/></a>
+			<a href="#"
+				><img
+					src="./img/contacts/icon_viber.svg"
+					alt="Viber"
+			/></a>
+			<a href="#"
+				><img
+					src="./img/contacts/icon_whatsapp.svg"
+					alt="WhatsApp"
+			/></a>
+			<a href="#"
+				><img
+					src="./img/contacts/icon_instagram.svg"
+					alt="Instagram"
+			/></a>
+			<a href="#"
+				><img
+					src="./img/contacts/icon_facebook.svg"
+					alt="Facebook"
+			/></a>
 		</div>
 		<div class="footer__copyright">
 			<p>©2023 IT-Mod. All rights reserved.</p>
